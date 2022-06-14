@@ -1,6 +1,14 @@
 $(function () {
     forms();
+    snippetImg();
 });
+function snippetImg() {
+    $(document).ready(function () {
+        let img = $(document).find('[data-type=snippet-img-hide]');
+
+        $(document).find('[data-type=snippet-img-show]').html(img);
+    });
+}
 
 function forms() {
     $(document).on("submit", "[data-type=js-form]", function (e) {
